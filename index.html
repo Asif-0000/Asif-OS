@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="ASIF OS — a personal workspace for projects, study, clients and focused work.">
+  <title>ASIF OS — Personal Workspace</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-lockup">
+        <div class="brand-mark">A<span>.</span></div>
+        <div class="brand-copy"><strong>ASIF<span> OS</span></strong><small>PERSONAL WORKSPACE</small></div>
+      </div>
+
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">▦</span><span>Overview</span><kbd>01</kbd></button>
+        <button class="nav-item" data-view="focus"><span class="nav-icon">◷</span><span>Focus & Tasks</span><kbd>02</kbd></button>
+        <button class="nav-item" data-view="projects"><span class="nav-icon">▤</span><span>Projects</span><kbd>03</kbd></button>
+        <button class="nav-item" data-view="study"><span class="nav-icon">▧</span><span>Study Center</span><kbd>04</kbd></button>
+        <button class="nav-item" data-view="clients"><span class="nav-icon">◉</span><span>Client Pipeline</span><kbd>05</kbd></button>
+        <button class="nav-item" data-view="notes"><span class="nav-icon">▱</span><span>Notes & Ideas</span><kbd>06</kbd></button>
+        <button class="nav-item" data-view="prompts"><span class="nav-icon">✳</span><span>Prompt Lab</span><kbd>07</kbd></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="storage-card">
+          <div class="storage-top"><span class="status-pulse"></span><span>LOCAL WORKSPACE</span></div>
+          <p>Your data is saved in this browser.</p>
+          <button class="text-button" data-action="open-settings">Manage data <span>↗</span></button>
+        </div>
+        <button class="nav-item settings-link" data-view="settings"><span class="nav-icon">⚙</span><span>Settings</span></button>
+        <div class="user-chip"><div class="avatar">A</div><div><strong>Asif</strong><small>Workspace owner</small></div><span class="user-menu-dot">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="mobile-brand"><button class="icon-button mobile-menu" id="menuToggle" aria-label="Open menu">☰</button><strong>ASIF<span> OS</span></strong></div>
+        <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="pageCrumb">Overview</strong></div>
+        <div class="topbar-actions">
+          <label class="search-box"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search workspace..." autocomplete="off"><kbd>Ctrl K</kbd></label>
+          <button class="icon-button" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">◐</button>
+          <button class="top-add" data-action="quick-add"><span>＋</span> Quick add</button>
+        </div>
+      </header>
+
+      <div id="pageContent" class="page-content" aria-live="polite"></div>
+      <footer class="app-footer"><span>ASIF OS <b>·</b> Built for deliberate progress</span><span id="footerDate"></span></footer>
+    </main>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
